@@ -1,0 +1,24 @@
+Package: HydroRPackage
+Type: Package
+Title: HydroRPackage - Tools for Hydrological Analysis
+Version: 0.1.0
+Date: 2024-02-07
+Author: Marziye Sarvarizade
+Maintainer: <msarvari2332@gmail.com>
+Description: HydroRPackage provides a set of tools for hydrological analysis, including functions for importing NetCDF files, calculating IDF models, and plotting IDF curves. It is designed to assist researchers and practitioners in analyzing and visualizing hydrological data efficiently.
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+Imports:
+  sf,
+  curl,
+  data.table,
+  ggplot2,
+  terra,
+  ncdf4,
+  ncdf4.helpers,
+  CoSMoS,
+  lubridate
+RoxygenNote: 7.3.1
+Collate:
+  'Functions.R'
