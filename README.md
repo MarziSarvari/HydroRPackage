@@ -61,6 +61,44 @@ idf <- hydroPck_calculate_idf(dta)
 hydroPck_plot_idf_curves(idf)
 ```
 
+## Troubleshooting and Local Execution
+
+If you encounter issues while using HydroRPackage, you can clone the code repository and execute it locally in your R environment. Follow these steps:
+
+1. Clone the repository to your local machine:
+
+```sh
+   git clone https://github.com/MarziSarvari/HydroRPackage.git
+```
+
+2. In your R environment, load the necessary packages:
+```R
+library(HydroRPackage)
+library(ncdf4)
+library(ncdf4.helpers)
+library(terra)
+library(data.table)
+library(lubridate)
+library(CoSMoS)
+library(sf)
+library(curl)
+library(devtools)
+library(testthat)
+```
+3. Source the main functions and test files:
+```R
+source("./R/Functions.R")
+source("./tests/testthat/test_functions.R")
+```
+
+4. Alternatively, you can directly run the main functions for hydrological analysis:
+```R
+hydroPck_download_and_unzip()
+dta <- hydroPck_import_nc_files("data/adv_r_data")
+idf <- hydroPck_calculate_idf(dta)
+hydroPck_plot_idf_curves(idf)
+```
+
 Contributing
 ------------
 Contributions to HydroRPackage are welcome! If you encounter any issues or have suggestions for improvements, please open an issue on GitHub.
